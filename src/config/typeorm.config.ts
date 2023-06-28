@@ -6,12 +6,12 @@ export const getTypeOrmConfig = async (
   configService: ConfigService,
 ): Promise<TypeOrmModuleOptions> => ({
   type: 'postgres',
-  host: 'localhost',
+  host: configService.get('HOST'),
   port: configService.get('PORT'),
   database: configService.get('DATABASE'),
   username: configService.get('USERNAME'),
   password: configService.get('PASSWORD'),
   autoLoadEntities: true,
-  entities: [Product],
+  entities: [__dirname + '/**/*.entity{.js, .ts}'],
   synchronize: true,
 });
