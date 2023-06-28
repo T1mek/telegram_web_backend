@@ -17,7 +17,7 @@ import { CreateProductDto } from './dto/create-product.dto';
 import { ProductService } from './product.service';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { FileService } from '../file/file.serice';
-import {validate} from "class-validator";
+
 
 @Controller('products')
 export class ProductController {
