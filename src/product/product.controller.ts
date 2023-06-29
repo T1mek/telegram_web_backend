@@ -7,6 +7,7 @@ import {
   Param,
   Patch,
   Post,
+  Put,
   UploadedFiles,
   UseInterceptors,
   UsePipes,
@@ -63,7 +64,7 @@ export class ProductController {
     await this.productService.deleteProductById(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   @UsePipes(new ValidationPipe({ transform: true }))
   async updateProductById(
     @Param('id') id: number,
