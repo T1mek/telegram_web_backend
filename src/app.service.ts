@@ -6,8 +6,6 @@ export class AppService {
     return {
       name: 'shop-api',
       version: '0.0.1',
-      description: 'An REST API with NESTJS and MONGODB',
-      author: 'fyupanquia',
     };
   }
 }
