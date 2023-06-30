@@ -8,6 +8,6 @@ async function bootstrap() {
     cors: true,
   });
   app.useStaticAssets(join(__dirname, '..', 'assets'));
-  await app.listen(process.env.PORT || 3100);
+  await app.listen(process.env.PORT1 || 3100);
 }
 bootstrap();
